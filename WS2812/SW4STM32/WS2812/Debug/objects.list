@@ -1,0 +1,5 @@
+"Application/SW4STM32/startup_stm32f103xb.o"
+"Application/User/Init.o"
+"Application/User/main.o"
+"Application/User/stm32f1xx_hal_msp.o"
+"Application/User/stm32f1xx_it.o"
