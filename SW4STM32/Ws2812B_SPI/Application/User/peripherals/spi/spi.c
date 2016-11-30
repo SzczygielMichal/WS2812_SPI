@@ -2,7 +2,7 @@
 //                   spi.c
 //---------------------------------------------------
 
-#include "boards\board.h"
+#include "../../board/board.h"
 #include "stm32l1xx.h"
 
 #include "spi.h"
