@@ -2,11 +2,12 @@
 //                   spi.c
 //---------------------------------------------------
 
-#include "boards\board.h"
+#include "../../board/board.h"
 #include "stm32l1xx.h"
 
 #include "spi.h"
 #include "main.h"
+
 
 struct stSPI0 SPI_1; // spi na przerwaniach
 struct stSPI1 SPI_2; // spi na przerwaniach

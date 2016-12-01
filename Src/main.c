@@ -68,6 +68,14 @@ int main(void)
 	//
 	// 3 bajty okreœlaj¹ce kolor 1 diody LED WS2812B
 	//
+	struct RGB_LED
+	{
+		unsigned char Red;
+		unsigned char Green;
+		unsigned char Blue;
+		unsigned char none;
+	}typdef;
+
 	unsigned char led[][4] = {  {0x08, 0x00, 0x00, 0x00},
 								{0x18, 0x00, 0x00, 0x00},
 								{0x28, 0x00, 0x00, 0x00},
@@ -109,7 +117,6 @@ int main(void)
 								0x0000, 0x0000, 0x0000, 0x0000, 0x0000,	0x0000, 0x0000};	// Ostatnia linia oznacza sygna³ RESET dla diod WS2812
 	uint32_t *color = (uint32_t)&led;
 	volatile uint32_t kolor;
-
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -135,7 +142,7 @@ int main(void)
 	  HAL_SPI_Transmit(&hspi2, bufor, 16*5+7, 100);
 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 	  HAL_Delay(200);
-	  kolor = (uint32_t)*(color++);
+	  kolor = *(color++);
 
 	  /* USER CODE END WHILE */
 
